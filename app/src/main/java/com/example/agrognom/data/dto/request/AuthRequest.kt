@@ -1,0 +1,10 @@
+package com.example.agrognom.data.dto.request
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class AuthRequest(
+    val username: String,
+    val password: String,
+    val email: String? = null
+)

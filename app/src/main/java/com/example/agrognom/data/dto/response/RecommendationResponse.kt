@@ -1,8 +1,8 @@
-package com.example.agrognom.data.dto
+package com.example.agrognom.data.dto.response
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RecommendationResponseDto(
+data class RecommendationResponse(
     val recommendation: String,
 )

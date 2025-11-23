@@ -1,4 +1,4 @@
-package com.example.agrognom.data.dto
+package com.example.agrognom.data.dto.request
 
 import kotlinx.serialization.Serializable
 import java.math.BigDecimal

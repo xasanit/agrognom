@@ -1,4 +1,4 @@
-package com.example.agrognom.data.dto
+package com.example.agrognom.data.dto.response
 
 import kotlinx.serialization.Serializable
 

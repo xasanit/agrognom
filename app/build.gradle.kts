@@ -41,12 +41,19 @@ android {
 
 dependencies {
 
+    implementation("androidx.datastore:datastore-preferences:1.2.0")
+
+    implementation("io.ktor:ktor-client-auth:3.3.2")
     implementation("io.ktor:ktor-client-core:3.3.2")
     implementation("io.ktor:ktor-client-okhttp:3.3.2")
     implementation("io.ktor:ktor-client-content-negotiation:3.3.2")
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.2")
     implementation("io.ktor:ktor-client-logging:3.3.2")
-    implementation("io.ktor:ktor-client-android:3.3.2")
+    implementation(platform("io.ktor:ktor-bom:3.3.2"))
+
+    implementation("io.insert-koin:koin-core:4.1.1")
+    implementation("io.insert-koin:koin-android:4.1.1") // если это Android-проект
+    implementation("io.insert-koin:koin-androidx-compose:4.1.1") // если Jetpack Compose
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -56,6 +63,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.datastore.core)
+    implementation(libs.androidx.datastore.preferences.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
