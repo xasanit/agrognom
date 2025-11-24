@@ -1,9 +1,6 @@
-package com.example.agrognom.data.dto.response
+package com.example.agrognom.domain.model
 
-import kotlinx.serialization.Serializable
-
-@Serializable
-data class WeatherResponse(
+data class Weather(
     val location: String,
     val temp_c: Double,
     val humidity: Int,

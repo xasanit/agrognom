@@ -2,8 +2,8 @@ package com.example.agrognom.network
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import com.example.agrognom.data.api.Authentication
-import com.example.agrognom.data.api.AuthenticationApiImpl
+import com.example.agrognom.data.api.auth.AuthenticationApi
+import com.example.agrognom.data.api.auth.AuthenticationApiImpl
 import com.example.agrognom.data.repository.AuthRepositoryImpl
 import com.example.agrognom.data.tokenStorage.TokenStorage
 import com.example.agrognom.data.tokenStorage.dataStore
@@ -18,7 +18,7 @@ val networkModule = module {
     single { TokenStorage(get()) }
     single<String>(named("baseUrl")) { "http://localhost:8080/api" }
     single<HttpClient> { provideHttpClient(get()) } // зависит только от TokenStorage
-    single<Authentication> { AuthenticationApiImpl(get(), get(named("baseUrl"))) }
+    single<AuthenticationApi> { AuthenticationApiImpl(get(), get(named("baseUrl"))) }
     single { AuthRepositoryImpl(get(), get()) }
 
 }

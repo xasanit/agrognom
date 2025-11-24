@@ -1,8 +1,8 @@
-package com.example.agrognom.data.api
+package com.example.agrognom.domain.repository
 
 import com.example.agrognom.data.dto.response.CropResponse
 
-interface Crop {
+interface CropRepository {
 
     suspend fun getCrops(): List<CropResponse>
 

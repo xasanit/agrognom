@@ -1,0 +1,25 @@
+package com.example.agrognom.data.api.soil
+
+import com.example.agrognom.data.dto.response.SoilResponse
+import com.example.agrognom.data.tokenStorage.authRequest
+import com.example.agrognom.domain.repository.AuthRepository
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.request.get
+
+class SoilApiImpl(
+    val client: HttpClient,
+    val baseUrl: String,
+    val authRepository: AuthRepository
+): SoilApi {
+    override suspend fun getSoils(): List<SoilResponse> {
+        return authRequest(authRepository) {
+            client.get("${baseUrl}/soils").body()
+        }
+    }
+
+    override suspend fun getSoil(id: Long): SoilResponse {
+        return client.get("${baseUrl}/soils/${id}").body()
+    }
+
+}

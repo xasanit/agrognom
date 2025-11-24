@@ -1,6 +1,6 @@
 package com.example.agrognom.data.repository
 
-import com.example.agrognom.data.api.Authentication
+import com.example.agrognom.data.api.auth.AuthenticationApi
 import com.example.agrognom.data.dto.request.AuthRequest
 import com.example.agrognom.data.dto.request.RefreshRequest
 import com.example.agrognom.data.dto.response.TokenResponse
@@ -9,7 +9,7 @@ import com.example.agrognom.domain.repository.AuthRepository
 import kotlinx.coroutines.flow.first
 
 class AuthRepositoryImpl(
-    private val api: Authentication,
+    private val api: AuthenticationApi,
     private val storage: TokenStorage
 ): AuthRepository {
 

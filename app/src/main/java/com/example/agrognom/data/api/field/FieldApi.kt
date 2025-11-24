@@ -1,9 +1,9 @@
-package com.example.agrognom.data.api
+package com.example.agrognom.data.api.field
 
 import com.example.agrognom.data.dto.request.FieldCreateRequest
 import com.example.agrognom.data.dto.response.FieldResponse
 
-interface Field {
+interface FieldApi {
 
     suspend fun getField(id: Long): FieldResponse
 
