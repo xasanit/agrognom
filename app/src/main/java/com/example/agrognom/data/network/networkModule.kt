@@ -1,4 +1,4 @@
-package com.example.agrognom.network
+package com.example.agrognom.data.network
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences

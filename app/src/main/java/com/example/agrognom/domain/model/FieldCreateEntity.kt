@@ -1,10 +1,8 @@
-package com.example.agrognom.data.dto.request
+package com.example.agrognom.domain.model
 
-import kotlinx.serialization.Serializable
 import java.math.BigDecimal
 
-@Serializable
-data class FieldCreateRequest(
+data class FieldCreateEntity(
     val name: String,
     val area: BigDecimal,
     val cropId: Long,

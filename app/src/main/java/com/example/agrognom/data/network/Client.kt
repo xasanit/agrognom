@@ -1,7 +1,7 @@
-package com.example.agrognom.network
+package com.example.agrognom.data.network
 
 import com.example.agrognom.data.tokenStorage.TokenStorage
-import com.example.agrognom.exception.RefreshRequiredException
+import com.example.agrognom.data.exception.RefreshRequiredException
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.ClientRequestException
@@ -34,7 +34,7 @@ fun provideHttpClient(
         // Обработка 401
         HttpResponseValidator {
             handleResponseExceptionWithRequest { exception, _ ->
-                if (exception is ClientRequestException && exception.response.status.value == 401) {
+                if (exception is ClientRequestException && ( exception.response.status.value == 401 || exception.response.status.value == 403 )) {
                     // Просто кидаем исключение
                     throw RefreshRequiredException()
                 }

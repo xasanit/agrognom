@@ -1,8 +1,7 @@
 package com.example.agrognom.data.tokenStorage
 
-import com.example.agrognom.data.repository.AuthRepositoryImpl
 import com.example.agrognom.domain.repository.AuthRepository
-import com.example.agrognom.exception.RefreshRequiredException
+import com.example.agrognom.data.exception.RefreshRequiredException
 
 suspend inline fun <T> authRequest(
     repository: AuthRepository,

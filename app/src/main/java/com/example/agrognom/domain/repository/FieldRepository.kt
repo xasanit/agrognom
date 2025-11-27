@@ -1,15 +1,15 @@
 package com.example.agrognom.domain.repository
 
-import com.example.agrognom.data.dto.request.FieldCreateRequest
-import com.example.agrognom.data.dto.response.FieldResponse
+import com.example.agrognom.domain.model.Field
+import com.example.agrognom.domain.model.FieldCreateEntity
 
 interface FieldRepository {
 
-    suspend fun getField(id: Long): FieldResponse
+    suspend fun getField(id: Long): Field
 
-    suspend fun getFields(): List<FieldResponse>
+    suspend fun getFields(): List<Field>
 
-    suspend fun createField(fieldCreateRequest: FieldCreateRequest): FieldResponse
+    suspend fun createField(fieldCreateEntity: FieldCreateEntity): Field
 
     suspend fun deleteField(id: Long)
 

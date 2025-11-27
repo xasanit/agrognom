@@ -13,9 +13,7 @@ class SoilApiImpl(
     val authRepository: AuthRepository
 ): SoilApi {
     override suspend fun getSoils(): List<SoilResponse> {
-        return authRequest(authRepository) {
-            client.get("${baseUrl}/soils").body()
-        }
+        return client.get("${baseUrl}/soils").body()
     }
 
     override suspend fun getSoil(id: Long): SoilResponse {

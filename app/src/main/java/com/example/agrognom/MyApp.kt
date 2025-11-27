@@ -1,7 +1,7 @@
 package com.example.agrognom
 
 import android.app.Application
-import com.example.agrognom.network.networkModule
+import com.example.agrognom.data.network.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 

@@ -1,11 +1,11 @@
 package com.example.agrognom.domain.repository
 
-import com.example.agrognom.data.dto.response.CropResponse
+import com.example.agrognom.domain.model.Crop
 
 interface CropRepository {
 
-    suspend fun getCrops(): List<CropResponse>
+    suspend fun getCrops(): List<Crop>
 
-    suspend fun getCrop(id: Long): CropResponse
+    suspend fun getCrop(id: Long): Crop
 
 }
