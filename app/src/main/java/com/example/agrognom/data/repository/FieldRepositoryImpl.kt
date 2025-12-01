@@ -5,7 +5,7 @@ import com.example.agrognom.data.tokenStorage.authRequest
 import com.example.agrognom.domain.mapper.toDomain
 import com.example.agrognom.domain.mapper.toDto
 import com.example.agrognom.domain.model.Field
-import com.example.agrognom.domain.model.FieldCreateEntity
+import com.example.agrognom.domain.model.FieldCreate
 import com.example.agrognom.domain.repository.AuthRepository
 import com.example.agrognom.domain.repository.FieldRepository
 
@@ -26,7 +26,7 @@ class FieldRepositoryImpl(
         }.map { it.toDomain() }
     }
 
-    override suspend fun createField(fieldCreateEntity: FieldCreateEntity): Field {
+    override suspend fun createField(fieldCreateEntity: FieldCreate): Field {
         return authRequest(authRepository) {
             api.createField(fieldCreateEntity.toDto())
         }.toDomain()
