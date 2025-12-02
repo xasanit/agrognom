@@ -9,7 +9,6 @@ import io.ktor.client.request.get
 class SoilApiImpl(
     val client: HttpClient,
     val baseUrl: String,
-    val authRepository: AuthRepository
 ): SoilApi {
     override suspend fun getSoils(): List<SoilResponse> {
         return client.get("${baseUrl}/soils").body()
