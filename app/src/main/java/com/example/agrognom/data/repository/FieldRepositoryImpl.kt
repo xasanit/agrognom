@@ -1,9 +1,9 @@
 package com.example.agrognom.data.repository
 
-import com.example.agrognom.data.api.field.FieldApi
-import com.example.agrognom.data.tokenStorage.authRequest
-import com.example.agrognom.domain.mapper.toDomain
-import com.example.agrognom.domain.mapper.toDto
+import com.example.agrognom.data.local.authRequest
+import com.example.agrognom.data.mapper.toDomain
+import com.example.agrognom.data.mapper.toDto
+import com.example.agrognom.data.remote.api.field.FieldApi
 import com.example.agrognom.domain.model.Field
 import com.example.agrognom.domain.model.FieldCreate
 import com.example.agrognom.domain.repository.AuthRepository

@@ -1,8 +1,8 @@
 package com.example.agrognom.data.repository
 
-import com.example.agrognom.data.api.region.RegionApi
-import com.example.agrognom.data.tokenStorage.authRequest
-import com.example.agrognom.domain.mapper.toDomain
+import com.example.agrognom.data.local.authRequest
+import com.example.agrognom.data.mapper.toDomain
+import com.example.agrognom.data.remote.api.region.RegionApi
 import com.example.agrognom.domain.model.Region
 import com.example.agrognom.domain.repository.AuthRepository
 import com.example.agrognom.domain.repository.RegionRepository

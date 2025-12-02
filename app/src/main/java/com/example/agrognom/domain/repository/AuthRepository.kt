@@ -1,6 +1,6 @@
 package com.example.agrognom.domain.repository
 
-import com.example.agrognom.data.dto.response.TokenResponse
+import com.example.agrognom.data.remote.dto.response.TokenResponse
 
 interface AuthRepository {
 

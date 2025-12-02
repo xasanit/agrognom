@@ -1,10 +1,10 @@
 package com.example.agrognom.data.repository
 
-import com.example.agrognom.data.api.auth.AuthenticationApi
-import com.example.agrognom.data.dto.request.AuthRequest
-import com.example.agrognom.data.dto.request.RefreshRequest
-import com.example.agrognom.data.dto.response.TokenResponse
-import com.example.agrognom.data.tokenStorage.TokenStorage
+import com.example.agrognom.data.local.datastore.TokenStorage
+import com.example.agrognom.data.remote.api.auth.AuthenticationApi
+import com.example.agrognom.data.remote.dto.request.AuthRequest
+import com.example.agrognom.data.remote.dto.request.RefreshRequest
+import com.example.agrognom.data.remote.dto.response.TokenResponse
 import com.example.agrognom.domain.repository.AuthRepository
 import kotlinx.coroutines.flow.first
 
